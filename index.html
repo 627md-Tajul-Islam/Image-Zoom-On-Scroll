@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom On Scroll </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(window).scroll(function(){
+             var scroll = $(window).scrollTop();
+             $(".zoom img").css({ 
+               width: (100 + scroll/5) + "%" 
+             })
+        })
+    </script>
+</head>
+<body>
+     <section class="zoom">
+         <img src="img.jpg"  alt="">
+     </section>
+     <section>
+         
+     </section>
+</body>
+</html>
